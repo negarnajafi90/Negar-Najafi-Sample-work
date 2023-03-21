@@ -1,0 +1,91 @@
+.modal-content {
+    text-align: left;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-bottom: 300px;
+    margin-top: -200px;
+}
+
+*{
+    font-size: 14px;
+}
+
+
+
+th{
+    /* height: 20px !important; */
+    font-size: 13px;
+    background: #eef3f6;
+    padding: 12px;
+    padding-left: 14px;
+    padding-bottom: 4px !important;
+}
+
+.numberclass {
+    font-variant-numeric: tabular-nums;
+    padding-top: 2px;
+  }
+
+.inlineInput{height: 15px;}
+
+.invoiceBox {
+    background-color: #eef3f6;
+    width: calc(100% + 14px);
+    margin-left: -14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 1.4;
+}
+
+#TRSPreview .warningInsideBody {
+    padding-right: 50px;
+    height: fit-content;
+    margin: 4px;
+}
+
+#TRSPreview .warningHeader{
+    margin-top: 5px;
+}
+
+#warnings{
+    display: none;
+}
+/* 
+@media print {
+
+    
+  
+  }
+
+  #Invoice *{
+    color: white !important;
+    background-color: white !important;
+    visibility: hidden !important;
+} */
+
+@media print {
+    #TRSPreview {
+        padding: 0.4in !important;
+        padding-right: 0.6in !important;
+        color: #000;
+        background-color: #fff;
+        }
+    .frontImageLogo {
+        position: absolute;
+        left: calc(100% - 150px)!important;
+        top: -10px!important;
+    }
+
+    #Invoice *{
+        color: default !important;
+        background-color: default !important;
+        visibility: default !important;
+    }
+    .buttonsprint{display: none;}
+
+  }

@@ -1,0 +1,338 @@
+<div id="myModalTRS" class="modal"  style="z-index: 10;padding-top: 2vh;">
+
+    <div class="modal-content" style="z-index: 10; padding: 60px; padding-top: 40px; padding-bottom: 50px; margin-bottom: 150px;">
+
+        <div id="printing">
+
+            <div id="TRSPreview" style="width: 100%; margin-left: 20px; box-sizing: border-box; padding-right: 20px;">
+
+                <div id="Invoice" class="">
+
+                    <label id="Title3" class="HeadLines" style="width: 63%; text-align: right; margin-top: 2px;">Commission Statement</label>
+
+                    <span class="floatDataRightSide buttonsprint">
+
+                        <button style="float: right; border: none; background: none; cursor: pointer;" type="button" id="closeTRS"><img
+                            src="../ImagesUsed/Add.png" alt="" style="height: 19px; transform: rotateZ(45deg); cursor: pointer;"></button>
+
+                        <button style="float: right; border: none; background: none; cursor: pointer;" id="" type="button"><img
+                            src="../ImagesUsed/Print.png"  style="height: 20px; cursor: pointer;" onclick="simplePrintTRS('printing')"></button>
+
+                    </span>
+                    
+
+                    <!-- This Span contains the Property information -->
+
+                    <!-- <div class="forAddressTop">
+
+                        <label id="Property5"></label>
+
+                    </div> -->
+
+                    <hr class="addressHr" style="margin-bottom: 4px; margin-right: 4px;    width: 100%;">
+
+                    <div id="MainInvoiceSection">
+
+                        <div id="printMainInvoice">
+
+                            <div class="referralInvLogo">
+                                <label  class="heavyfont" style="color:black;  text-transform: uppercase;" id="MainTitle"></label>
+
+                                <label class="flexibleDate floatDataRightSide reference" id="invoiceDealID"
+                                type="text" style="font-weight: bold;">Reference</label>
+                            </div>
+                         
+                            <div class="frontImageLogo">
+                                <img src="../ImagesUsed/InvoiceLogo.jpg" alt="House" class="insideImglogo">
+                            </div>
+                            <!-- <div style="position: relative;">
+
+                                <label style="color:black;  text-transform: uppercase;" class="heavyfont"
+                                    id="MainTitle">Commission
+                                    Statement</label>
+
+                                <div class="frontImageLogo frontImageFlex">
+                                    <img src="../ImagesUsed/InvoiceLogo.jpg" alt="House" class="insideImglogo"
+                                        loading="lazy">
+                                </div>
+
+                            </div> -->
+
+                            <div class="flexibleContainer NewSectionSmall" style="width: 70%;">
+
+                                <label class="flexibleDate heavyfont NewSectionSmall" id="Date"
+                                    style="margin-right: auto; padding-left: 0;"></label>
+
+                                <!-- <label class="flexibleDate heavyfont floatDataRightSide">Reference
+                                    1100</label> -->
+
+                            </div>
+
+
+                            <div class="flexibleContainer NewSectionSmall" style="width: 70%;">
+
+                                <label class="flexibleZero" id="RecieverFullName">Andrew Matthieow</label>
+
+                            </div>
+
+                            <div class="flexibleContainer NewSectionSmall" style="width: 70%;"></div>
+
+                            <div class="flexibleContainer" style="width: 70%;">
+
+                                <label id="RecieverAddress"></label>
+
+                            </div>
+
+                            <div class="flexibleContainer" style="width: 70%;">
+
+                                <label id="RecieverAddressTwo"></label>
+
+                            </div>
+
+
+                            <div id="SummaryOfTransaction" class="invoiceBox NewSectionSmall" style="height: auto;">
+
+                                <div class="flexibleContainer">
+
+                                    <label class="heavyfont"
+                                        style="margin: 0; width: 130px;  margin-left: 15px; padding-top: 4px;  ">Property:</label>
+
+                                    <label id="Property7" class="inlineInput flexibleZero"></label>
+
+                                </div>
+
+                                <div class="flexibleContainer">
+
+                                    <label id="Title1"
+                                        style="margin: 0; width: 130px; padding-top: 4px; margin-left: 15px; font-weight: bold;">Vendor(s)&#8282;</label>
+
+                                    <label class="inlineInput flexibleZero" id="InvoiceVendors"></label>
+
+                                </div>
+
+
+                                <div class="flexibleContainer">
+
+                                    <label id="Title2"
+                                        style="margin: 0; width: 130px; margin-left: 15px; padding-top: 4px;"
+                                        class="heavyfont">Puchaser(s):</label>
+
+                                    <label class="inlineInput flexibleZero" id="InvoicePuchasers"></label>
+
+                                </div>
+
+                                <div class="flexibleContainer">
+
+                                    <label style="margin: 0; width: 130px; margin-left: 15px; padding-top: 4px;"
+                                        class="heavyfont">Closing:</label>
+
+                                    <label class="inlineInput flexibleZero" id="InvoiceClosingDate"></label>
+
+                                </div>
+
+                            </div><!-- Closing SummaryOfTransaction -->
+
+                            <h1 id="onclickfield2" style="text-align: center; padding-top: 50px; font-size: 25px;">Coming soon...</h1>
+                            <h2 id="onclickfield" style="text-align: center; padding-top: 10px; font-size: 15px; cursor: pointer; text-decoration: underline;">Press here to view the deal</h2>
+
+
+                            <p class="invoiceBox" id="LeasingBox" style="text-align: center;">Commission for our
+                                services rendered in
+                                accordance with the relevant Agreement of Purchase and Sale.</p>
+
+                            <p class="invoiceBox" id="SellingBox" style="text-align: center;">Commission for our
+                                services rendered in
+                                accordance with the relevant Rental Agreement.</p>
+
+                            <div id="SomeDetailInformationTRS" class="NewSectionSmall" style="padding-right: 15px;">
+
+                                <div class="flexibleContainer">
+
+                                    <label class="flexible" style="flex: 6;" id="InvoiceFeeLabelPrice">Price</label>
+
+                                    <label class="flexible inlineInput" style="flex: 0.1; padding-top: 3px;">$</label>
+
+                                    <label class="inlineInput flexible" style="text-align: right;  padding-top: 3px;"
+                                        id="InvoicePrice"></label>
+
+                                </div>
+
+                                <div class="flexibleContainer" style="margin-top: 4px;">
+
+                                    <label class="flexible" style="flex: 6;" id="InvoiceFeeLabel">Commission
+                                        Payable</label>
+
+                                    <label class="flexible" style="flex: 0.1; padding-top: 3px;"></label>
+
+                                    <label class="inlineInput flexible" style="text-align: right; padding-top: 3px;"
+                                        id="InvoiceCommission"></label>
+
+                                </div>
+
+                                <div class="flexibleContainer"
+                                    style="margin-top: 4px; height: 19px; border-bottom: 1px solid lightgrey;">
+
+                                    <label class="flexible" style="flex: 6;" id="HSTNumberInv">HST (xxxxxRT0001)</label>
+
+                                    <label class="flexible" style="flex: 0.1;"></label>
+
+                                    <label class="inlineInput flexible" style="text-align: right; padding-top: 3px;"
+                                        id="InvoiceTaxAmount"></label>
+                                    <!-- <label id="InvoicetaxNumber"></label> -->
+                                </div>
+
+                                <div class="flexibleContainer" style="margin-top: 7px;">
+
+                                    <label id="HSTLabel" class="flexible" style="flex: 6;">Total Commission</label>
+
+                                    <label class="flexible inlineInput" style="flex: 0.1;">$</label>
+
+                                    <label class="inlineInput flexible" style="text-align: right; padding-top: 3px;"
+                                        id="InvoiceTotal"></label>
+
+                                </div>
+                             
+                                <div class="flexibleContainer NewSectionSmall"
+                                    style=" border-bottom: 1px solid lightgrey;">
+
+                                    <label class="flexible" style="flex: 6; height: 19px; padding-top: 2px;">Deposit
+                                        held in
+                                        trust:</label>
+
+                                    <label class="flexible inlineInput" style="flex: 0.1; padding-top: 5px;">$</label>
+
+                                    <label class="inlineInput flexible" style="text-align: right; padding-top: 6px;"
+                                        id="InvoiceDeposits"></label>
+                                </div>
+
+                                <div class="flexibleContainer" style="margin-top: 6px;">
+
+                                    <label id="BalanceLabel" class="flexible"
+                                        style="flex: 6; font-weight: bold; padding-top: 2px;">Balance
+                                        due:</label>
+
+                                    <label class="flexible inlineInput"
+                                        style="flex: 0.1; font-weight: bold; padding-top: 5px;">$</label>
+
+                                    <label class="inlineInput flexible"
+                                        style="text-align: right; font-weight: bold; padding-top: 6px;"
+                                        id="InvoiceRemaingBalance"></label>
+                                </div>
+
+                            </div>
+
+
+                            <div id="StatmentContects" class="noticePayment"
+                                style="padding-top: 11px; padding-bottom: 15px; margin-left: -14px;">
+
+                                <span class="BlockDislay" id="ExtraNotice">
+
+                                    <label style="color: white; font-weight: bold;">A sum of $</label>
+
+                                    <label style="color: white; font-weight: bold;" id="BalanceDueAmountRemain"></label>
+
+                                    <label style="color: white; font-weight: bold;" id="StatementReturnMessage"> is
+                                        owning to the
+                                        vendor(s) on
+                                        closing.</label></span>
+
+                                <p class="BlockDislay"
+                                    style="color: white; font-weight: bold; margin-top: 5px; margin-bottom: 0;">
+                                    Please
+                                    contact our office, if you have any questions.</p>
+
+                            </div><!-- Closing StatmentContects  -->
+
+                            <div id="InvoiceContects">
+
+                                <div class="invoiceBox NewSectionSmall" style="padding: 0">
+
+                                    <p class="noticePayment" style="color: white;"> Please mail a cheque
+                                        payable to "<span style="font-weight: bold; color: white;" id="BusinessNameMail"></span>" or make
+                                        an electronic payment to our commission trust
+                                        account:</p>
+
+                                </div>
+
+                                <div>
+
+                                    <div style="width: 100%;">
+
+                                        <label style="width: 130px;">Bank:</label>
+
+                                        <label class="inlineInput" id="InvoiceBank" name="InvoiceBank"
+                                            style="padding: 0;"></label>
+                                    </div>
+
+                                    <div style="width: 100%; margin-top: 1px;">
+
+                                        <label style="width: 130px; ">Transit:</label>
+
+                                        <label class="inlineInput" id="InvoiceTransit" name="InvoiceTransit"
+                                            style="padding: 0;"></label>
+                                    </div>
+
+                                    <div style="width: 100%; margin-top: 1px; ">
+
+                                        <label style="width: 130px;">Account:</label>
+
+                                        <label class="inlineInput" id="InvoiceAccount" name="InvoiceAccount"
+                                            style="padding: 0;"></label>
+                                    </div>
+
+                                </div>
+
+                            </div><!-- Closing  InvoiceContects -->
+
+
+                            <div id="SenderInformation">
+
+                                <label style="margin-top: 32px;">Sincerely,</label>
+
+                                <br>
+
+                                <label style="padding-left: 0;margin-top: 34px;" class="inlineInput" type="text"
+                                    id="InvoiceBroker"
+                                    name="InvoiceBroker"><%= MyInformation.Firstname%><%= MyInformation.Lastname   %></label>
+
+                                <br>
+
+                                <label style="margin-top: 3px;">Broker Of Record</label>
+
+                                <br>
+
+                                <label style="margin-top: 4px;" id="invoiceBusinessName"><%=mycompany.BusinessName%></label>
+
+                                <br>
+                                <br>
+
+                                <label id="invoicePhone" style="margin-top: 4px;"><%=mycompany.Phone%></label>
+
+                                <br>
+
+                                <label style="margin-top: 4px;"><a id="invoiceEmail"
+                                        href="mailto:<%=mycompany.Email%>"><%=mycompany.Email%></a></label>
+
+                                <br>
+
+                                <label id="invoiceAddress1" style="margin-top: 4px;"><%=mycompany.Unit%> <%=mycompany.StreetNumber%>
+                                    <%=mycompany.StreetName %></label>
+
+                                <br>
+
+                                <label id="invoiceAddress2" style="margin-top: 4px;"><%=mycompany.City%>, <%=mycompany.Province%>,
+                                    <%=mycompany.PostalCode%></label>
+
+                            </div><!-- Closing SenderInformation -->
+
+                        </div>
+
+                    </div><!-- Closing Main Invoice Section -->
+
+
+                </div><!-- Closing Invoice -->
+
+            </div>
+        </div>
+    </div>
+</div>

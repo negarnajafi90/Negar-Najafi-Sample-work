@@ -1,0 +1,279 @@
+<div id="myModalTRS" class="modal" style="z-index: 10;padding-top: 2vh;">
+
+       <div class="modal-content" style="z-index: 10; padding: 60px; padding-top: 40px; padding-bottom: 50px; margin-bottom: 150px;">
+
+              <div id="printing">
+
+                     <div id="TRSPreview"
+                            style="width: 100%; margin-left: 20px; box-sizing: border-box; padding-right: 20px;">
+                            <div id="Invoice" class="">
+
+                                   <div id="InvoiceMainSection">
+
+                                          <label id="Title3" class="HeadLines" style="width: 54%; text-align: right; margin-top: 2px;">INVOICE</label>
+
+                                          <span class="floatDataRightSide buttonsprint">
+
+                                                 <button style="float: right; border: none; background: none; cursor: pointer;" type="button" id="closeTRS"><img
+                                                        src="../ImagesUsed/Add.png" alt="" style="height: 19px; transform: rotateZ(45deg); cursor: pointer;"></button>
+                            
+                                                    <button style="float: right; border: none; background: none; cursor: pointer;" id="" type="button"><img
+                                                        src="../ImagesUsed/Print.png"  style="height: 20px; cursor: pointer;" onclick="simplePrintOther('printing')"></button>
+                            
+                                                    <!-- <span class="tooltip">
+                                                        <img class="lineButton manageListButton" id="emailInvoicebtn" src="../ImagesUsed/Email.png"
+                                                            alt="Email" style="width: 22px;" loading="lazy">
+                                                        <span class="tooltiptext">Email invoice</span>
+                                                    </span> -->
+
+                                          </span>
+
+                                          <!-- <div class="forAddressTop">
+
+                                                 <label id="Propertyaddress3"></label>
+                                                 <label id="invoiceDealID" style="font-weight: bold; float: right"><%= Deal.id %></label>
+                                          </div> -->
+
+
+
+                                          <hr style="margin-bottom: 4px;     margin-top: 4px; margin-right: 4px;">
+
+
+                                          <div id="MainInvoiceSection">
+
+                                                 <div id="printMainInvoice">
+                                                        <div class="referralInvLogo">
+                                                               <label  class="heavyfont" style="color:black;  text-transform: uppercase;" id="MainTitle"></label>
+
+                                                               <label class="flexibleDate floatDataRightSide reference" id="invoiceDealID"
+                                                               type="text" style="font-weight: bold;">Reference</label>
+                                                        </div>
+                                                        
+                                                        <div class="frontImageLogo">
+                                                               <img src="../ImagesUsed/InvoiceLogo.jpg" alt="House" class="insideImglogo">
+                                                        </div>
+                                                        <!-- <div class="appraisalInvLogo" style="position: relative;">
+
+                                                               <label class="heavyfont"
+                                                                      style="color:black;  text-transform: uppercase;"
+                                                                      class="heavyfont" id="MainTitle">INVOICE</label>
+
+                                                               <div class="frontImageLogo">
+                                                                      <img src="../ImagesUsed/InvoiceLogo.jpg"
+                                                                             alt="House" class="insideImglogo">
+                                                               </div>
+
+                                                        </div> -->
+
+                                                        <div class="flexibleContainer heavyfont NewSectionSmall"  style="width: 70%;">
+                                                               <label class="flexibleDate NewSectionSmall"
+                                                                      id="InvoiceCuttentDate" name="InvoiceCuttentDate"
+                                                                      style="margin-right: auto; padding-left: 0;"><%=Myinvoice.Date%></label>
+                                                               <!-- <label class="flexibleDate heavyfont floatDataRightSide">Reference</label> -->
+                                                        </div>
+
+                                                        <div class="flexibleContainer NewSectionSmall" style="width: 70%;">
+                                                               <label class=" flexibleZero" id="InvoiceReciverName"
+                                                                      name="InvoiceReciverName"></label>
+                                                        </div>
+
+                                                        <div class="flexibleContainer" style="width: 70%;">
+                                                               <label id="InvoiceReciverNameBusiness"
+                                                                      name="InvoiceReciverNameBusiness"></label>
+                                                        </div>
+
+                                                        <div class="flexibleContainer" style="width: 70%;">
+
+                                                               <label id="invoiceClientAddress"></label>
+
+                                                        </div>
+
+                                                        <div class="flexibleContainer" style="width: 70%;">
+
+                                                               <label id="invoiceClientAddressTwo"></label>
+
+                                                        </div>
+
+                                                        <div id="InvoicePropertyInformation"
+                                                               class="invoiceBox NewSectionSmall"
+                                                               style="margin-top: 24px; margin-bottom: 32px;">
+
+                                                               <div class="flexibleContainer">
+
+                                                                      <label
+                                                                             style=" margin:0; margin-left: 15px; width: 130px; font-weight: bold;">Property:
+                                                                      </label>
+
+                                                                      <label id="invoicePropertyAddress"
+                                                                             class="inlineInput flexibleZero"
+                                                                             style="margin-top: 0;"></label>
+
+                                                               </div>
+
+                                                               <div class="flexibleContainer" style="margin-top: 5px;"
+                                                                      id="propertyInfo2">
+                                                                      <label
+                                                                             style="margin:0; margin-left: 15px; padding-top: 2px; width: 130px;  font-weight: bold;">Report
+                                                                             Date: </label>
+                                                                      <label style="margin-top: 2px;"
+                                                                             class="inlineInput flexibleZero "
+                                                                             type="text" id="InvoicePropertyReportDate"
+                                                                             name="InvoicePropertyReportDate"
+                                                                             value="Report Date"><%=Myinvoice.ClosingDate%></label>
+
+                                                                      <input type="Hidden"
+                                                                             id="HiddenInvoicePropertyReportDate"
+                                                                             name="HiddenInvoicePropertyReportDate"
+                                                                             value="">
+                                                               </div>
+
+                                                        </div><!-- Closing InvoicePropertyInformation -->
+
+                                                        <h1 id="onclickfield2" style="text-align: center; padding-top: 50px; font-size: 25px;">Coming soon...</h1>
+                                                        <h2 id="onclickfield" style="text-align: center; padding-top: 10px; font-size: 15px; cursor: pointer; text-decoration: underline;">Press here to view the deal</h2>
+
+
+                                                        <div id="SomeDetailInformation" class="NewSectionSmall"
+                                                               style="padding-right: 15px;">
+
+                                                               <div class="flexibleContainer">
+
+                                                                      <label class="flexible" style="flex: 6;"
+                                                                             id="InvoiceFeeLabel">Our
+                                                                             Appraisal
+                                                                             Fee</label>
+
+                                                                      <label class="flexible"
+                                                                             style="flex: 0.1;">$</label>
+
+                                                                      <label class="flexible"
+                                                                             style="text-align: right; font-variant-numeric: tabular-nums;"
+                                                                             id="PropertyFeeInvoice"
+                                                                             name="PropertyFeeInvoice"><%=Myinvoice.SalesPrice%></label>
+
+                                                                      <input type="hidden" id="HiddenPropertyFeeInvoice"
+                                                                             name="HiddenPropertyFeeInvoice" value="">
+                                                               </div>
+
+                                                               <div class="flexibleContainer" style="margin-top: 4px;">
+                                                                      <label class="flexible" style="flex: 6;">HST </label>
+                                                                      <label class="flexible"
+                                                                             style="flex: 0.1;"></label>
+                                                                      <label class="flexible"
+                                                                             style="text-align: right; font-variant-numeric: tabular-nums;"
+                                                                             id="PropertyHSTInvoice"
+                                                                             name="PropertyHSTInvoice"></label>
+                                                                      <input type="hidden" id="HiddenPropertyHSTInvoice"
+                                                                             name="HiddenPropertyHSTInvoice" value="">
+                                                               </div>
+
+                                                               <div class="flexibleContainer" style="margin-top: 4px;">
+                                                                      <label class="flexible"
+                                                                             style="flex: 6; font-weight: bold;"><b>Balance</b></label>
+                                                                      <label class="flexible"
+                                                                             style="flex: 0.1; font-weight: bold;">$</label>
+                                                                      <label class="flexible"
+                                                                             style="text-align: right; font-weight: bold;"
+                                                                             id="BalanceInvoice"
+                                                                             name="BalanceInvoice"><%=Myinvoice.Balance%></label>
+                                                                      <input type="hidden" id="HiddenBalanceInvoice"
+                                                                             name="HiddenBalanceInvoice">
+                                                               </div>
+
+                                                        </div><!-- Closing SomeDetailInformation" -->
+
+                                                        <div class="invoiceBox NewSectionSmall" style="padding: 0">
+                                                               <p class="noticePayment" id="companychequeEmail">
+                                                                      Please mail a
+                                                                      cheque payable to "<span id="BusinessNameMail"><%=mycompany.BusinessName%></span>" or
+                                                                      make an electronic
+                                                                      payment to our commission trust account:</p>
+                                                        </div>
+
+                                                        <div id="BankInformation">
+
+                                                               <div style="width:100%">
+                                                                      <label style="width:130px">Bank:</label>
+                                                                      <label style="padding: 0;" class="inlineInput" id="invoiceBankName">
+                                                                             for=""><%=mycompany.CommissionBankNumber%></label>
+                                                                      <input style="padding: 0;" class="inlineInput"
+                                                                             type="hidden" id="InvoiceBank"
+                                                                             name="InvoiceBank" value="Bank" readonly>
+                                                               </div>
+
+                                                               <div style="width:100%; margin-top: 1px">
+                                                                      <label style="width:130px">Transit:</label>
+                                                                      <label style="padding: 0;" class="inlineInput" id="invoiceTransitName"
+                                                                             for=""><%=mycompany.CommissionTransitNumber%></label>
+                                                                      <input style="padding: 0;" class="inlineInput"
+                                                                             type="hidden" id="InvoiceTransit"
+                                                                             name="InvoiceTransit" value="Transit"
+                                                                             readonly>
+                                                               </div>
+
+                                                               <div style="width:100%; margin-top: 1px">
+                                                                      <label style="width:130px">Account:</label>
+                                                                      <label style="padding: 0;" class="inlineInput" id="invoiceAccountNumber"
+                                                                             for=""><%=mycompany.CommissionAccountNumber%></label>
+                                                                      <input style="padding: 0;" class="inlineInput"
+                                                                             type="hidden" id="InvoiceAccount"
+                                                                             name="InvoiceAccount" value="Account"
+                                                                             readonly>
+                                                               </div>
+
+                                                        </div><!-- Closing BankInformation" -->
+
+                                                        <div id="SenderInformation">
+
+                                                               <label style="margin-top: 35px;">Sincerely,</label>
+
+                                                               <br>
+
+                                                               <label style="padding-left: 0;margin-top: 34px;"
+                                                                      class="inlineInput" type="text" id="InvoiceBroker"
+                                                                      name="InvoiceBroker">Broker
+                                                                      Name</label>
+
+                                                               <br>
+
+                                                               <label style="margin-top: 4px;">Broker of Record</label>
+
+                                                               <br>
+
+                                                               <label id="invoiceBusinessName" style="margin-top: 4px;"><%=mycompany.BusinessName%></label>
+
+                                                               <br>
+                                                               <br>
+
+                                                               <label id="invoicePhone" style="margin-top: 4px;"><%=mycompany.Phone%></label>
+
+                                                               <br>
+
+                                                               <label style="margin-top: 4px;"><a target="_blank" id="invoiceEmail"
+                                                                             href="mailto:<%=mycompany.Email%>"><%=mycompany.Email%></a></label>
+
+                                                               <br>
+
+                                                               <label id="invoiceAddress1" style="margin-top: 4px;"><%=mycompany.Unit%>
+                                                                      <%=mycompany.StreetNumber%>
+                                                                      <%=mycompany.StreetName %></label>
+
+                                                               <br>
+
+                                                               <label id="invoiceAddress2" style="margin-top: 4px;"><%=mycompany.City%>,
+                                                                      <%=mycompany.Province%>,
+                                                                      <%=mycompany.PostalCode%></label>
+
+                                                        </div><!-- Closing SenderInformation -->
+
+
+
+                                                 </div>
+
+                                          </div>
+                                   </div>
+                            </div><!-- Closing Invoice tab Content -->
+                     </div>
+              </div>
+       </div>
+</div>

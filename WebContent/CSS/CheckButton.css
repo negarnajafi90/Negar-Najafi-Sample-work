@@ -1,0 +1,92 @@
+/* The container */
+.container {
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .containerextra{margin-left: 40px;}
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    height: 14px;
+    width: 14px;
+    background-color: white;
+    border: 1px solid #ccc;
+  }
+
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: white;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 4px;
+    top: 2px;
+    width: 4px;
+    height: 6px;
+    border: solid grey;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    
+  }
+
+  #ConfirmationRecordCheckbox .checkmark{
+    height: 15px;
+    width: 15px;
+  }
+
+  .bluecheck .checkmark{
+    background: #29c1e1 !important;;
+  }
+
+  #ConfirmationRecordCheckbox .container .checkmark:after{
+    border-color: white;
+  }
+
+
+  @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    .containerextra{margin-left: 20px;}
+
+}

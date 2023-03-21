@@ -1,0 +1,104 @@
+.forAuditTrail{width: 100%;}
+
+.fileSignedOne, .fileOpened, .fileSignedTwo, .FileSent, .FileUploaded, .FileUpdated,
+.AddNotes, .Emailed, .Approved, .Reopened, .Updated, .FileClosed{
+    border: 0px solid rgb(128, 0, 21); 
+    margin: 0px 0px;  
+    margin-bottom: 10px;
+}
+
+.description{
+    margin-top: 0;
+    font-size: 12px;
+}
+
+.comment{border: 2px solid #7fe565; padding: 2px; width:  calc(100% - 2px);  padding-top: 7px; padding-left: 10px; font-size: 12px; content: "Some Comments";}
+
+.headline{font-weight: bold; margin-top: 2px; color: #054d6a}
+
+.additionalInfo{display: none;}
+
+.fileOpened .headline::after{
+    content: "New file is opened by Agent 2";
+}
+
+.fileSignedOne .headline::after{
+    content: "File is signed by Agent 1 and sent to Agent 2";
+}
+
+.fileOpened .headline::after{
+    content: "File was opened by Agent 2";
+}
+
+.fileSignedTwo .headline::after{
+    content: "File is signed by Agent 2 and sent to BOR";
+}
+
+.FileSent .headline::after{
+    content: "BOR sent file back to Someone";
+}
+
+.FileUploaded .headline::after{
+    content: "Someone uploaded document";
+}
+
+.FileUpdated .headline::after{
+    content: "File updated by Someone and sent to BOR";
+}
+
+.AddNotes .headline::after{
+    content: "BOR, Added notes";
+}
+
+.Emailed .headline::after{
+    content: "BOR, Emailed Invoice to client";
+}
+
+.Approved .headline::after{
+    content: "BOR, Approved file";
+}
+
+.Reopened .headline::after{
+    content: "BOR, Reopened file";
+}
+
+.Updated .headline::after{
+    content: "BOR, Updated following fields:";
+}
+
+.FileClosed .headline::after {
+    content: "BOR, Closed file";
+}
+
+
+
+.fileOpened .description::after{
+    content: "March 1, 2020 4:50:01 pm";
+}
+
+.fileSignedOne .description::after{
+    content: "April 11, 2019 2:40:51 am";
+}
+
+.fileOpened .description::after, .fileSignedTwo .description::after, .FileSent .description::after, .FileUploaded .description::after, .FileUpdated .description::after, .AddNotes .description::after, .Emailed .description::after, .Approved .description::after, .Reopened .description::after, .Updated .description::after, .FileClosed .description::after {
+    content: "September 22, 2021 12:40:51 am";;
+}
+
+.comment::after{
+    content: "Some Comments of what happened";
+}
+
+.fileOpened .comment, .fileSignedOne .comment, .FileUploaded .comment, .FileUpdated .comment, .Emailed .comment, .Approved .comment, .Reopened .comment, .FileClosed .comment
+{
+    display: none;
+}
+
+
+.fileOpened .logoaudit, .fileSignedTwo .logoaudit, .FileSent .logoaudit, .FileUploaded .logoaudit, .FileUpdated .logoaudit, .AddNotes .logoaudit, .Emailed .logoaudit, .Approved .logoaudit, .Reopened .logoaudit, .Updated .logoaudit, .FileClosed .logoaudit {
+    content: url(../ImagesUsed/RemoveSVG.svg);
+}
+
+.fileSignedOne .logoaudit{
+    content: url(../ImagesUsed/AddSVG.svg);
+}
+

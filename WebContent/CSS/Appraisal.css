@@ -1,0 +1,112 @@
+#ClientProcess, #OwnerProcess{float: right;}
+
+
+
+/* #Invoice .lineButton{margin: 5px;    margin-bottom: 0px; margin-top: 0px;} */
+
+#Invoice .manageListButton{width:18px; height: 12px;}
+
+
+
+#InvoiceMainSection .inlineInput{border-width: 0px;}
+
+#RecordSheetPropertyDetailInformation input[type="date"]::-webkit-inner-spin-button,
+#RecordSheetPropertyDetailInformation input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+#InvoiceMainSection input[type="date"]::-webkit-inner-spin-button, 
+#InvoiceMainSection  input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+/* For button copy */
+.copyButton{background: none;
+    border: none;
+    color: #29c1e1;
+    font-weight: lighter;
+    cursor:pointer;
+    margin-bottom: 2px;
+    margin-top: 30px;
+    padding-left: 0px;
+    }
+
+    .EditButton, .EditSubmit, .EditDiscard{
+      margin-top: 2px;
+    }
+
+    /* Invoice */
+
+#MainInvoiceSection label{color: black; height: auto;}
+
+#RecordSheetPropertyDetailInformation .card input {text-align: center;  width: 100%;}
+#RecordSheetPropertyDetailInformation .card label {text-align: center;  width: 100%;    color: #29c1e1;}
+
+/* #ApprasialRecordSheet td .inlineInput{border-width: 0px;} */
+
+/* #ReferralFeeRecordSheet td .inlineInput{border-width: 0px;} */
+
+#tableTwo .withBorder{
+  border: 1px solid lightgrey;
+}
+
+#tableTwo .noBorder{
+  border: 0px solid lightgrey;
+}
+
+#myModal *{
+  box-sizing: border-box;
+}
+
+.modal-content{
+  box-sizing: content-box !important;
+}
+#ApprasialRecordSheet th, #ReferralFeeRecordSheet th{
+  font-size: 13px;
+  background: #eef3f6;
+  padding: 8px;
+  text-align: left;
+  /* padding-right: 20px; */
+}
+
+
+
+#ReferralFeeRecordSheet textarea{height: 30px;}
+
+#RecordSheetPropertyDetailInformation td {padding: 0;}
+
+/* .newclass{background: #f3f3f3;} */
+
+/* .newclass .inlineInput{background: #f3f3f3;} */
+
+.flexibleDate{flex:0.2;}
+
+.flexibleZero{flex:0 0 auto; padding: 0px; min-width:fit-content; max-width: fit-content;}
+
+#BankInformation .inlineInput{width: auto; height: 20px;}
+
+#BankInformation label{margin: 0;}
+
+#SomeDetailInformation input, #SomeDetailInformation label{margin: 0; padding-left: 0px; height: 17px;}
+
+
+.modal .modal-content *{
+  box-sizing: content-box !important;
+}
+
+#myModalEmail .modal-content *{
+  box-sizing: border-box !important;
+}
+
+
+
+
+#myModalEmail .ErrorEmpty,#myModalEmail  .headlineEmail{
+  margin-right: 0px;
+}
+
+#myModalEmail  .headlineEmail{
+  width: 100%;
+}

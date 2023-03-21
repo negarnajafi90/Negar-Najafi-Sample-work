@@ -1,0 +1,376 @@
+<div id="myModalTRS" class="modal" style="z-index: 10;">
+
+    <div class="modal-content" style="z-index: 10;">
+
+        <div id="printing" class="trsPrintSpecial">
+
+            <div id="TRSPreview"
+                style="width: 100%; margin-left: 20px; box-sizing: border-box; padding-right: 20px;">
+
+                <div style="width: 100%;">
+
+                    <label style="box-sizing: border-box; padding: 0; padding-top: 7px; height: 14px; margin: 0; text-align: center; padding-left: 80px;width:calc(100% - 80px);"
+                        class="HeadLines">RECORD SHEET</label>
+                    <button class="buttonsprint" style="float: right; border: none; background: none; cursor: pointer;" type="button"
+                        id="closeTRS"><img src="../ImagesUsed/Add.png" alt=""
+                            style="height: 19px; transform: rotateZ(45deg);  cursor: pointer;"></button>
+                    <button class="buttonsprint" style="float: right; border: none; background: none; cursor: pointer;" id=""
+                        type="button"><img src="../ImagesUsed/Print.png" style="height: 20px; cursor: pointer;"
+                            onclick="simplePrintReferral('printing')"></button>
+                </div>
+
+                <!-- This Span contains the Property information -->
+
+                <div class="forAddressTop">
+
+                    <label id="PropertyPreview">Referral Fee Receipt</label>
+
+                    <span id="dealID"></span>
+
+                </div>
+
+                <hr class="addressHr" style="margin-bottom: 22px;">
+
+                <div id="MainTRSPreviewsection" class="ReferralTRSPrint">
+
+                    <!-- <div id="RecordSheetPropertyDetailInformation" class=""> -->
+
+                        <div  id="RecordSheetPropertyDetailInformation" class="cardsDetails flexibleContainer">
+
+                            <div class="columnSmall flexible" style="padding-left: 5px;">
+
+                                <div class="card">
+
+                                    <label class="TRSlabel heavyfont">Referral Date</label>
+
+                                    <span class="cardSpan"><label class="TRSinput" 
+                                            id="ReferralFeeRecordSheetDatePreview"></label></span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="columnSmall flexible" style="box-sizing: border-box">
+
+                                <div class="card">
+
+                                    <label class="TRSlabel heavyfont">Source</label>
+
+                                    <span class="cardSpan"><label class="TRSinput heavyfont"
+                                            id="ReferralFeeRecordSheetSourcePreview"></label></span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="columnSmall flexible" style="box-sizing: border-box; padding-right: 5px;">
+
+                                <div class="card">
+
+                                    <label class="TRSlabel heavyfont">Referral Fee</label>
+
+                                    <span class="cardSpan" style="text-align: center;">
+                                        <label class="TRSinput heavyfont" id="ReferralFeeRecordSheetfeePreview" style="float: none; padding-left: 0; width: 80%;"></label>
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    <!-- </div>CloseRecordSheetPropertyDetailInformation -->
+
+                    <div id="warnings" style="display: none;">
+                        <label class="warningHeader">Compliance Warning(s)</label>
+
+                        <div class="invoiceBox">
+
+                            <div class="flexibleContainer" id="WarningRebate">
+                                <div class="flexible" style="flex: 0.3;"><label class="warningInsideHeader">Compensation Agreement</label></div>
+                                <div class="flexible"><p class="warningInsideBody"> Agent indicated that compensation agreement was not disclosed to all parties. The following explanation was provided: "
+                                    <span id="explanationRebate"></span>"</p></div>
+                            </div> 
+
+                            <div class="flexibleContainer" id="WarningHST">
+                                <div class="flexible" style="flex: 0.3;"><label class="warningInsideHeader">GST/HST</label></div>
+                                <div class="flexible"><p class="warningInsideBody">GST/HST rate was changed. Please double check.</p></div>
+                            </div>
+                        
+                        </div>
+                    </div>
+
+                    <div id="RecordSheetPartiesInformationPreview" class="SomeMarginTop" style="margin-left: -14px;">
+
+                        <p style="font-weight: bold; height: 18px; margin-left: 14px;">Parties and Contact Details</p>
+
+                        <table style="width:100%;" id="propertyTablePreview">
+
+                               <tr class="newclass">
+                                      <th width="15%" style="padding-left:14px">Party</th>
+
+                                      <th width="22%">Name</th>
+
+                                      <th width="22%">Company</th>
+
+                                      <th width="27%">Address</th>
+
+                                      <th width="15%">Phone</th>
+                               </tr>
+
+                               <tr>
+
+                                      <td><label class="inlineInput" id="RecordSheetParty1"
+                                                    style="padding-left:8px">Client</label></td>
+
+                                      <td><label class="inlineInput" id="RecordSheetClientName1"></label></td>
+
+                                      <td><label class="inlineInput" id="RecordSheetClientCompany1"></label></td>
+
+                                      <td><label class="inlineInput" id="RecordSheetClientAddress1"></label>
+                                      </td>
+
+                                      <td><label class="inlineInput" id="RecordSheetClientPhone1" style="padding: 0; "></label></td>
+                               </tr>
+
+                               <tr id="DisplayClient2">
+
+                                      <td><label class="inlineInput" id="RecordSheetParty2"
+                                                    style="padding-left:8px">Client</label></td>
+
+                                      <td><label class="inlineInput" id="RecordSheetClientName2"></label></td>
+
+                                      <td><label class="inlineInput" id="RecordSheetClientCompany2"></label></td>
+
+                                      <td><label class="inlineInput" id="RecordSheetClientAddress2"></label>
+
+                                      </td>
+
+                                      <td><label class="inlineInput" id="RecordSheetClientPhone2"
+                                                    style="padding: 0;"></label></td>
+
+
+                               </tr>
+
+                               <tr id="DisplayReferralSource1">
+
+                                      <td><label class="inlineInput" style="padding-left:8px"
+                                                    id="RecordReferralSourceSheetParty1">Referral Source</label></td>
+
+                                      <td><label  class="inlineInput" id="RecordSheetReferralSourceName1"></label>
+                                      </td>
+
+                                      <td><label class="inlineInput" id="RecordSheetReferralSourceCompany1"></label></td>
+
+                                      <td><label class="inlineInput" id="RecordSheetReferralSourceAddress1"></label></td>
+
+                                      <td><label class="inlineInput" id="RecordSheetReferralSourcePhone1" style="padding: 0;"></label>
+                                      </td>
+                               </tr>
+                        </table>
+
+                 </div><!-- Close RecordSheetPartiesInformation -->
+
+                 <div class="NewSection">
+
+                        <p style="font-weight: bold; height: 18px;">Fee Breakdown</p>
+
+                        <table style="width: calc(100% + 14px); margin-left: -14px;" id="tableFeePreview">
+
+                               <tr class="newclass">
+
+                                      <th width="27%"></th>
+
+                                      <th width="9%" id="allocation" class="headlineright"
+                                             >Allocation</th>
+
+                                      <th width="11%" class="headlineright">Split</th>
+
+                                      <th width="13%" class="headlineright">Fee</th>
+
+                                      <th width="14%" class="headlineright">HST</th>
+
+                                      <th width="12%" id="HSTHead1" class="headlineright ChangedHST"
+                                             >HST (%)</th>
+
+                                      <th width="14%" class="headlineright">Total</th>
+                               </tr>
+
+                               <tr id="DisplayBreakdownGrossFee">
+
+                                      <td><label class="inlineInput" id="BreakdownGrossFeeLabel"
+                                                    style="text-align: left; padding-left: 8px;"></label>
+                                      </td>
+
+                                      <td id="Allocation1" ><label 
+                                                    class="inlineInput" id="Allocation1Input"
+                                                    style="padding-right: 0px;"></label></td>
+
+                                      <td><label class="inlineInput" id="BreakdownGrossFeeSplit"
+                                                    style="padding-right: 0px;"></label></td>
+
+                                      <td><label class="inlineInput textRight numberclass"
+                                                    id="BreakdownGrossFeeAmount"></label></td>
+
+                                      <td><label  class="inlineInput textRight numberclass"
+                                                    id="BreakdownGrossFeeAmountHST"></label></td>
+
+                                      <td  class="ChangedHST"><label
+                                                    class="inlineInput  textRight numberclass withBorder"
+                                                    id="BreakdownGrossFeeAmountHSTPercent"></td>
+
+                                      <td><label  class="inlineInput textRight numberclass"
+                                                    id="BreakdownGrossFeeTotal"></label></td>
+
+                               </tr>
+
+                               <tr>
+
+                                      <td><label  class="inlineInput" id="BreakdownAgent1Name"
+                                                    style="text-align: left;  padding-left: 8px;"></label>
+                                      </td>
+
+                                      <td id="Allocation2" ><label 
+                                                    class="inlineInput" id="Allocation2Input"
+                                                    style="padding-right: 0px;"></label></td>
+
+                                      <td><label  class="inlineInput" id="BreakdownAgent1Split"
+                                                    style="padding-right: 0px;"></label>
+                                      </td>
+
+                                      <td><label  class="inlineInput textRight numberclass"
+                                                    id="BreakdownAgent1Amount"></label></td>
+
+                                      <td><label  class="inlineInput textRight numberclass"
+                                                    id="BreakdownAgent1HST"></label>
+                                      </td>
+
+                                      <td  class="ChangedHST"><label
+                                                    class="inlineInput  textRight numberclass withBorder"
+                                                    id="BreakdownAgent1HSTPercent"></td>
+
+                                      <td><label  class="inlineInput textRight numberclass"
+                                                    id="BreakdownAgent1Total"></label>
+                                      </td>
+
+
+                               </tr>
+
+                               <tr>
+
+                                      <td><label  class="inlineInput" id="BreakdownAgent2Name"
+                                                    style="text-align: left;  padding-left: 8px;"></label>
+                                      </td>
+
+                                      <td id="Allocation3"><label 
+                                                    class="inlineInput" id="Allocation3Input"
+                                                    style="padding-right: 0px;"></label></td>
+
+                                      <td><label class="inlineInput" id="BreakdownAgent2Split"
+                                                    style="padding-right: 0px;"></label>
+                                      </td>
+
+                                      <td><label class="inlineInput textRight numberclass"
+                                                    id="BreakdownAgent2Amount"></label></td>
+
+
+                                      <td><label class="inlineInput textRight numberclass"
+                                                    id="BreakdownAgent2HST"></label>
+                                      </td>
+
+                                      <td class="ChangedHST"><label
+                                                    class="inlineInput  textRight numberclass withBorder"
+                                                    id="BreakdownAgent2HSTPercent"></td>
+
+                                      <td><label class="inlineInput textRight numberclass"
+                                                    id="BreakdownAgent2Total"></label>
+                                      </td>
+                               </tr>
+
+                               <tr>
+
+                                      <td><label  class="inlineInput" id="BreakdownNetLabel"
+                                                    style="text-align: left;  padding-left: 8px;"
+                                                    name="BreakdownNetLabel" value="Net To Brokerage"
+                                                    readonl></label></td>
+
+                                      <td id="Allocation4" ><label 
+                                                    class="inlineInput" id="Allocation4Input"
+                                                    style="padding-right: 0px;" step=".1" name="Allocation4"
+                                                    value="" readonl></label></td>
+
+                                      <td><label  class="inlineInput" id="BreakdownNetSplit"
+                                                    style="padding-right: 0px;"></label>
+                                      </td>
+
+                                       
+                                      <td><label  class="inlineInput  textRight numberclass"
+                                                    id="BreakdownNetFee"></label></td>
+
+                                      <td><label  class="inlineInput  textRight numberclass"
+                                                    id="BreakdownNetHST"></label></td>
+
+
+                                      <td  class="ChangedHST"></td>
+
+                                      <td><label  class="inlineInput  textRight numberclass"
+                                                    id="BreakdownNetTotal"></label>
+                                      </td>
+                               </tr>
+
+                        </table>
+
+                 </div>
+
+                </div><!-- Closing Main TRS section -->
+
+                <h1 id="onclickfield2" style="text-align: center; padding-top: 150px; font-size: 25px;">Coming soon...</h1>
+                <h2 id="onclickfield" style="text-align: center; padding-top: 10px; font-size: 15px; cursor: pointer; text-decoration: underline;">Press here to view the deal</h2>
+                <script>
+                    var timenow = new Date();
+                    document.getElementById('timenow').value = timenow.toLocaleString();
+                </script>
+                <input type="hidden" id="timenow">
+                <div class="footerTRSPrint">
+                    <div class="notSubmitted">
+                        <div>
+                            <label>Real Estate Brokerage Corporation</label>
+                        </div>
+                        <div>
+                            <label>Prepared by <span id="AgentNamePrepared"></span></label>
+                            <label class="PrintedOn">Printed on <span id="printedDate1"></span></label>
+                        </div>
+                    </div>
+
+                    <div class="finallizedByAgent">
+                        <div>
+                            <label>Real Estate Brokerage Corporation</label>
+                        </div>
+                        <div>
+                            <label>Submitted by <span id="AgentNameSubmitted"></span> on <span
+                                    id="submittedDate"></span></label>
+                            <label class="PrintedOn">Printed on <span id="printedDate2"></span></label>
+                        </div>
+                    </div>
+
+                    <div class="approved">
+                        <div>
+                            <label>Real Estate Brokerage Corporation</label>
+                        </div>
+                        <div>
+                            <label>Submitted by <span id="AgentNameSubmittedApproved"></span> on <span
+                                    id="submittedDateApproved1"></span></label>
+                        </div>
+                        <div>
+                            <label>Approved by <span id="AgentNameSubmittedApprovedBroker"></span> on <span
+                                    id="submittedDateApproved2"></span></label>
+                            <label class="PrintedOn">Printed on <span id="printedDate3"></span></label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

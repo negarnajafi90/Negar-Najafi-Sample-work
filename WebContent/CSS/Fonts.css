@@ -1,0 +1,31 @@
+@font-face {
+    font-family: ProximaNova;
+    font-weight: normal;
+    font-style: normal;
+    src: url("../Fonts/ProximaNova/ProximaNova-Regular.otf") format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: ProximaNova;
+    font-style:italic;
+    font-weight: normal;
+    src: url("../Fonts/ProximaNova/ProximaNova-RegularItalic.otf") format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: ProximaNova;
+    font-weight: bold;
+    font-style: normal;
+    src: url("../Fonts/ProximaNova/ProximaNova-Bold.otf") format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: ProximaNova;
+    font-weight: lighter;
+    font-style: normal;
+    src: url("../Fonts/ProximaNova/ProximaNova-Light.otf") format("opentype");
+    font-display: swap;
+}

@@ -1,0 +1,275 @@
+
+		.custom-select2{
+			z-index: 20
+		}
+
+		.loadingmodal {
+			display:    none;
+			position:   fixed;
+			z-index:    500;
+			top:        0;
+			left:       0;
+			height:     100%;
+			width:      100%;
+			background: rgba( 255, 255, 255, .8 ) 
+						url('../ImagesUsed/loading.gif') 
+						50% 50% 
+						no-repeat;
+		}
+		/* When the body has the loading class, we turn
+		the scrollbar off with overflow:hidden */
+		.loading .loadingmodal {
+			overflow: hidden;   
+		}
+		/* Anytime the body has the loading class, our
+		modal element will be visible */
+		.loading .loadingmodal {
+			display: block;
+		}
+		.HeaderDashboard {
+			/* max-width: calc(100vw - 275px); */
+		}
+		.forcheckLabelList {
+			width: 170px;
+		}
+		.tablediv {
+			margin-top: 10px;
+			/* max-width: calc(100vw - 275px); */
+			overflow: scroll;
+			/* width: fit-content; */
+			/* width: 70vw; */
+			/* max-width: calc(100vw - 275px); */
+		}
+
+		.dataTables_paginate,
+		.paging_simple_numbers,
+		.paginate_button {
+			pointer-events: all;
+		}
+
+		.tdBig {
+			width: 8vw;
+			min-width: 7vw;
+		}
+
+		.tdMed {
+			width: 8vw;
+			min-width: 6vw;
+		}
+
+		.tdSm {
+			width: 6vw;
+			min-width: 5vw;
+		}
+
+		.tdMin{
+			width: 5vw;
+			min-width: 4vw;
+		}
+
+		/* .tdBigExtra {
+			width: 17vw;
+			min-width: 8vw;
+		}
+
+		.tdMedExtra {
+			width: 14vw;
+			min-width: 8vw;
+		}
+
+		.tdSmExtra {
+			width: 9.5vw;
+			min-width: 8vw;
+		} */
+
+		.rawSpan{
+			background-color: #054d6a;
+			width: 100%;
+			max-width: calc(100vw - 279px);
+			z-index: 1;
+			height: 29px;
+			margin-top: 47px;
+			position: fixed;
+			top: unset;
+		}
+
+		.multichoiceBox{
+			display: inline-block; width: 220px; margin: 0px; position: absolute;right: 4px;
+		}
+
+		#table-wrapper .wrapperdiv1child{
+			margin-bottom: -44px; margin-top: 24px;
+		}
+
+		.contactButton{
+			color: black
+		}
+
+		.navBarMobile{
+			display: none;
+			position: sticky;
+			width: 100vw;
+		}
+		
+
+		@media screen and (min-width: 1200px) {
+			.tdBig {
+				min-width: 13vw;
+			}
+
+			.tdMed {
+				min-width: 9vw;
+			}
+
+			.tdSm {
+				min-width: 7vw;
+			}
+		}
+
+		@media screen and (min-width: 1600px) {
+			.tdBig {
+				min-width: 15vw;
+			}
+
+			.tdMed {
+				min-width: 13vw;
+			}
+
+			.tdSm {
+				min-width: 10vw;
+			}
+		}
+
+		@media only screen 
+			/* and (min-device-width: 900px)  */
+			and (max-width: 1025px) {
+			/* and (-webkit-min-device-pixel-ratio: 1) { */
+			.rawSpan{
+				margin-top: 47px;
+				height: 28.5px;
+			}
+			#table-wrapper .wrapperdiv1child{
+				margin-bottom: -12px;
+   				margin-top: 16px;
+			}
+			.dataTables_filter label{
+				position: absolute;
+    			left: 0;
+				margin-top: 0px !important;
+			}
+			.dataTables_filter input{
+				height: 24px !important;
+			}
+			.multichoiceBox{
+				position: relative;
+				top: 32px;
+				left: -68px;
+				height: 24px;
+				font-size: 14px;
+			}
+			.select-selected{
+				font-size: 13px;
+			}
+			#commissions1 div, #commissions2 div, #AllcontactsTable div, #ClientsTable div, #lawFirmsTable div, #BrokeragesTable div{
+				white-space: nowrap; 
+				resize: none;
+				overflow: auto;
+				white-space: break-spaces;
+			}
+		}
+		/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+		/* Portrait and Landscape */
+		@media only screen 
+		and (min-device-width: 768px) 
+		and (max-device-width: 1024px) 
+		and (-webkit-min-device-pixel-ratio: 1) 
+		{
+			.rawSpan{
+				margin-top: 46px
+			}
+			#table-wrapper .wrapperdiv1child{
+				margin-bottom: -18px;
+   				margin-top: 16px;
+			}
+			.dataTables_filter label{
+				position: absolute;
+    			left: 0;
+				margin-top: 0px !important;
+			}
+			.dataTables_filter input{
+				height: 30px !important;
+			}
+			.multichoiceBox{
+				position: relative;
+				top: 32px;
+				left: -68px;
+				height: 30px;
+			}
+
+			.tdBig {
+				min-width: 14vw;
+			}
+
+			.tdMed {
+				min-width: 12vw;
+			}
+
+			.tdSm {
+				min-width: 10vw;
+			}
+
+			.tdMin{
+				width: 9vw;
+				min-width: 8vw;
+			}	
+
+			.tdBigExtra {
+				min-width: 13vw;
+			}
+
+			.tdMedExtra {
+				min-width: 11vw;
+			}
+
+			.tdSmExtra {
+				min-width: 9vw;
+			}
+			.tdiPad{
+				min-width: 14vw;
+			}
+
+		}
+
+
+		/* Portrait */
+		@media only screen 
+		and (min-device-width: 768px) 
+		and (max-device-width: 1024px) 
+		and (orientation: portrait) 
+		and (-webkit-min-device-pixel-ratio: 1) 
+		{
+
+		}
+
+		/* Landscape */
+		@media only screen 
+		and (min-device-width: 768px) 
+		and (max-device-width: 1024px) 
+		and (orientation: landscape) 
+		and (-webkit-min-device-pixel-ratio: 1) {
+			
+		}
+
+		/* for phone future */
+
+		@media only screen 
+		and (min-device-width: 128px) 
+		and (max-device-width: 604px) 
+		and (-webkit-min-device-pixel-ratio: 1) {
+
+		} 
+
+		@media screen and (max-width: 800px) {
+
+		}

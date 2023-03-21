@@ -1,0 +1,253 @@
+#TRS *{
+    box-sizing: border-box;
+  } 
+
+h1{
+    color: #054d6a;
+}
+
+body {
+    font-family: 'ProximaNova', Arial, Helvetica, sans-serif;
+}
+  
+/* Styles for Transaction details*/
+
+.cardsDetails{
+    margin: 0 0px; /* Remove extra left and right margins, due to padding in columns */
+}
+  
+  /* Clear floats after the columns */
+.cardsDetails:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* #ApprasialRecordSheet tr:nth-child(even) :not([style*="display: none"]){background-color: red;} */
+  
+.columnSmall {
+  float: left;
+  padding: 0 20px;
+  margin-right: -10px;
+  margin-left: 0px;
+}
+
+#RecordSheetPropertyDetailInformation .columnSmall{
+  width: 141px;
+  box-sizing: border-box;
+  padding: 0 20px 0 20px;}
+
+.columnBig {
+    float: left;
+    width: 40%;
+    padding: 10px;
+}
+
+ /* Responsive columns - one column layout (vertical) on small screens */
+
+ @media screen and (max-width: 800px) {
+  .column {
+      float: none;
+    width: 100%;
+    display: block;
+  }
+}
+
+  /* Style the counter cards */
+.card {
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2); 
+    padding: 16px;
+    padding-bottom: 11px;
+    padding-top: 18px;
+    text-align: left;
+    overflow: hidden;
+    font-weight: bold;
+  }
+
+  #RecordSheetPropertyDetailInformation .card{
+    height: 55px;
+    box-sizing: border-box;
+    padding: 12px;
+  }
+
+.card label{
+    float: left;
+    padding-right: 0;
+    margin-top: 0;
+    font-weight: bold;
+    width: auto;
+}
+.card input{
+  font-weight: bold;
+    float: left;
+    color: #21c1e1;
+    text-align: right;
+    width: 100%;
+    border: none;
+    margin-bottom: 5px;
+    padding-top: 0;
+}
+
+.card .cardSpan{
+        display: block;
+        overflow: hidden;
+        padding-right: 5px;
+}
+
+.TRSDealPreview .card .cardSpan {
+  display: flex !important;
+}
+
+.cardSpan label{
+  float: right;
+}
+
+.textSpan{
+  margin-left: 50px;
+}
+
+/* Removing border while reading "Readonly" elements */
+.readable{
+  outline: none;
+}
+
+
+/* Styles for Table */
+.DetailsPartiesAndContactInformation, .AgentAndDeposit{
+   overflow-x:auto;
+ }
+  
+.DetailsPartiesAndContactInformation table{
+  width: 100%;
+  border-spacing: 0;
+  padding: 5px;
+}
+/*   
+.DetailsPartiesAndContactInformation th{
+  text-align: left;
+  font-weight: normal;
+  border-bottom: 1px solid gray;
+  padding: 10px;
+  padding-left: 14px;
+} */
+  
+.DetailsPartiesAndContactInformation td{
+padding: 5px;
+
+}
+
+#TRSPreview .DetailsPartiesAndContactInformation td{
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+
+.numberclass{float: right;}
+
+
+  
+  /* Styles for Tables Agent/Deposit */
+  
+  .depRow {
+    margin-left:-5px;
+    margin-right:-5px;
+  
+  }
+    
+  .depColumn {
+    float: left;
+    width: 50%;
+    padding: 5px;
+  }
+
+  td label{margin-left: 8px;}
+
+  /* .depRow input{
+    width: 100%;
+    border:none;
+  } */
+
+
+  /* Clearfix (clear floats) */
+  .depRow::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .moveNumber{padding-right: 12px;}
+  
+  .depRow table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+  }
+  
+  .underLine{
+  border-bottom: 0px solid gray;
+  }
+
+  .topLine{
+    border-top: 1px solid lightgrey;
+  }
+  
+  
+  /* Responsive layout */
+  @media screen and (max-width: 600px) {
+    .depColumn {
+      width: 100%;
+    }
+  }
+  
+  @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) 
+  {
+    
+  .card{
+    padding: 10px;
+    padding-bottom: 11px;
+    padding-top: 18px;
+  }
+
+  .card label{font-size: 14px;}
+
+  .columnSmall{
+    padding: 0 10px;
+  }
+
+  table .inlineInput{
+    font-size: 10px;
+  }
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+
+    
+  .card{
+    padding: 10px;
+    padding-bottom: 11px;
+    padding-top: 18px;
+  }
+
+  .card label{font-size: 14px;}
+
+  .columnSmall{
+    padding: 0 10px;
+  }
+
+  table .inlineInput{
+    font-size: 12px;
+  }
+
+}
+  

@@ -1,0 +1,111 @@
+*, * label, * input, .inlineInput{
+  font-size: 13px !important;
+}
+
+input:read-only {
+    background: none;
+  }
+
+  #dealID{
+    font-weight: bold;
+    text-align: center;
+    padding: 4px 0px;
+    background: orange;
+    float: right;
+    border-radius: 2px;
+    width: 100px;
+  }
+  #MainTitle{
+    width: 100%;
+    text-align: center;
+  }
+
+  #invoiceButtonSection{
+    display: none;
+  }
+
+  #TRStopLabel{
+    width: 100%;
+    text-align: center;
+  }
+
+  #Editbtn{
+    display: none;
+  }
+
+  .br1{
+    display: block;
+  }
+
+  #TRSFooterSection{display: none;}
+
+  .insideImglogo{
+    height: 150px;
+    border: 0px solid lightgray;
+  }
+  
+  .frontImageLogo{
+    position: relative;
+    float: right;
+    right: 1px;
+    width: 130px !important;
+    height: 130px !important;
+  }
+  #TRSPreview{
+    display: none;
+  }
+  #InvoiceMainSection{
+    display: none;
+  }
+
+
+  @media print {
+
+    .frontImageLogo{
+      width: 130px !important;
+      height: 130px !important;
+    }
+    
+    .insideImglogo{
+      max-height: 130px;
+      background-color: none;
+    }
+
+    #MainInvoiceSection {
+      padding: 0px;
+    }
+
+    #MainTitle{
+      display: none;
+    }
+
+    .reference{
+      position: absolute; top: 10px; right: 15px;
+    }
+    .buttonsprint{display: none;}
+
+    #printMainInvoice {
+    padding: 0px !important;
+    /* padding-bottom: 0 !important;
+    padding-top: 0 !important; */
+    /* padding-right: 0px !important; */
+      color: #000;
+      background-color: #fff;
+    }
+    /* #InvoicePropertyInformation{
+      margin-top: 40px !important;
+    } */
+    #SummaryOfTransaction, #InvoicePropertyInformation{
+      margin-top: 50px !important;
+    }
+    #TRSPreview{
+      display: block;
+      padding: 10px !important;
+      padding-right: 15px !important;
+    }
+    #InvoiceMainSection{
+      display: block;
+      padding-right: 15px !important;
+    }
+    
+  }

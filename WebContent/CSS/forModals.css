@@ -1,0 +1,165 @@
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    padding-top: 33vh; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  #myModalExit p, #myModalDiscard p, #myModalSaveClose p, #myModalDelete p, #myModalAvailable p, #myModalExpired p, #myModalOffMarket p, #myModalCompleted p, #myModalHST p, #myModal p, #myModalReopen p{
+    padding: 10px 14px;
+    margin-top: 20px;
+    text-align: justify;
+  }
+
+  #myModalExit .popUpContainer .close, #myModalDiscard .popUpContainer .close, #myModalSaveClose .popUpContainer .close, #myModalDelete .popUpContainer .close, #myModalAvailable .popUpContainer .close, #myModalExpired .popUpContainer .close, #myModalOffMarket .popUpContainer .close, #myModalCompleted .popUpContainer .close, #myModalHST .popUpContainer .close, #myModal .popUpContainer .close, #myModalReopen .popUpContainer .close{
+    float: left;
+    margin-left: 14px;
+  }
+  #myModalExit .popUpContainer .submitButton, #myModalDiscard .popUpContainer .submitButton, #myModalSaveClose .popUpContainer .submitButton, #myModalDelete .popUpContainer .submitButton, #myModalAvailable .popUpContainer .submitButton, #myModalExpired .popUpContainer .submitButton, #myModalOffMarket .popUpContainer .submitButton, #myModalCompleted .popUpContainer .submitButton, #myModalHST .popUpContainer .submitButton, #myModal .popUpContainer .submitButton, #myModalReopen .popUpContainer .submitButton{
+    float: right;
+    margin-right: 14px;
+  }
+
+  #myModalExit .close, #myModalDiscard .close, #myModalSaveClose .close, #myModalDelete .close, #myModalAvailable .close, #myModalExpired .close, #myModalOffMarket .close{
+    padding: 8px 10px;
+    width: 90px;
+
+  }
+
+  table{
+    width: 100%;
+  }
+
+  #dealID{
+    font-weight: bold;
+    text-align: center;
+    padding: 4px 0px;
+    background: #054d6a;
+    float: right;
+    border-radius: 2px;
+    width: 100px;
+  }
+
+  /* Modal Content */
+  .modal-content {
+    text-align: center;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    /* max-width: 500px; */
+    max-width: 349px;
+    /* margin-left: 40%; */
+    /* margin-top: 11%; */
+  }
+  
+  #myModalTRS * {
+    box-sizing: border-box !important;
+  }
+  .modal-content p{line-height: 1.5;}
+  
+  
+.modalHeader{
+    margin-top: -20px;
+    margin-left: -20px;
+    text-align: left;
+    background: #29c1e1;
+    height: 25px;
+    padding-top: 10px;
+    width: calc(100% + 5px);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding-left: 35px;
+  }
+
+  
+
+/* The Close Button */
+.close {
+    float: right;
+    font-weight: bold;
+    background: white;
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+    padding: 8px 30px;
+    margin-right: 10px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    border-color: #008fad;
+  }
+  
+  .finalButtons{
+    color: white;
+    font-weight: bold;
+    background: #29c1e1;
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin: 12px;
+    margin-bottom: 0;
+  }
+  
+  .finalButtons:hover{
+  
+    cursor: pointer;
+    background: #008fad;
+  }
+  
+  .submitButton{
+    color: white;
+    float: right;
+    font-weight: bold;
+    background: #29c1e1;
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+    padding: 8px 30px;
+    margin-left: 10px;
+  }
+  
+  .submitButton:hover{
+    cursor: pointer;
+    background: #008fad;
+  }
+  
+  .popUpContainer{
+    padding-top: 10px;
+    display: block;
+    height: 35px;
+  }
+ 
+
+  #myModalTRS .modal-content {
+    text-align: left;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    padding-bottom: 300px;
+    overflow: scroll;
+    /* margin-bottom: 300px;
+    margin-top: -200px; */
+  }
+
+  #myModalTRS{
+    padding-top: 5vh;
+  }
+  

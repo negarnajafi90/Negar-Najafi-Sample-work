@@ -1,0 +1,292 @@
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.input-group .form-control:first-child,
+.input-group-addon:first-child,
+.input-group-btn:first-child>.btn,
+.input-group-btn:first-child>.dropdown-toggle,
+.input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle) {
+  border-right: none;
+  background: white;
+  box-shadow: none;
+  /* -webkit-box-shadow: ease-in-out .15s, ease-in-out .15s;
+        -webkit-transition: ease-in-out .15s, ease-in-out .15s; */
+}
+
+.input-group .form-control:first-child,
+.input-group-addon:first-child,
+.input-group-btn:first-child>.btn,
+.input-group-btn:first-child>.dropdown-toggle,
+.input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group-addon,
+.input-group-btn,
+.input-group .form-control {
+  display: table-cell;
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  cursor: pointer;
+  background-color: #eee;
+}
+
+.input-group .form-control {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  vertical-align: middle;
+}
+
+.input-group-btn {
+  position: relative;
+  white-space: nowrap;
+}
+
+.input-group-addon,
+.input-group-btn {
+  width: 1%;
+  padding-top: 2px;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid lightgray;
+  border-left: 0;
+  border-radius: 3px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+}
+
+.input-group-btn:hover {
+  background: white;
+}
+
+
+.input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+
+.form-control {
+  font-size: 13px;
+  box-sizing: content-box;
+  padding: 0px 8px;
+  height: 22px;
+}
+
+/* .input-group
+       {
+           width: 180px;
+           margin-top:30px;
+       } */
+.btn {
+  
+  padding: 2px 7px 4px 5px;
+}
+
+#Pending .btn, #Completed .btn, #Commissions .btn {
+  background-color: white;
+  padding: 2px 3px 0px 3px;
+}
+
+.withdelete .btn{
+  padding-right: 2px;
+  padding-left: 1px;
+}
+
+.withdelete .bi-x:hover{
+  color: red;
+}
+
+
+.withdelete > .input-group-btn {
+  padding-top: 1px; border-radius: 0px; border-right: 0;cursor: pointer;
+}
+
+.withdelete > .input-group-btn ~ .input-group-btn {
+  border-bottom-right-radius: 3px;border-top-right-radius: 3px; border-right: 1px solid lightgray;
+}
+
+/* .withdelete .input-group-btn{
+ 
+} */
+
+/* .input-group-btn:last-child>.btn {
+            border-left: none;
+            margin-left: -1px;
+        } */
+
+#Pending .input-group .form-control:first-child, #Completed .input-group .form-control:first-child, #Commissions .input-group .form-control:first-child {
+  text-align: right;
+}
+
+.input-group .form-control:first-child,
+.input-group-addon:first-child,
+.input-group-btn:first-child>.btn,
+.input-group-btn:first-child>.dropdown-toggle,
+.input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle) {
+  width: 100%;
+  border-right: none;
+  background: white;
+  box-shadow: none;
+  -webkit-box-shadow: ease-in-out .15s, ease-in-out .15s;
+  
+  -webkit-transition: ease-in-out .15s, ease-in-out .15s;
+}
+
+.glyphicon-calendar:before {
+  content: url(../ImagesUsed/CalendarSVG.svg);
+  background-size: 10px;
+  cursor: pointer;
+  
+}
+.glyphicon-remove:before {
+  content: url(../ImagesUsed/RemoveSVG.svg);
+  background-size: 10px;
+  cursor: pointer;
+}
+
+/* for dropdown menu */
+
+
+
+.dropdown-menu {
+  line-height: 1.428571429;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px;
+  margin: 2px 0 0;
+  font-size: 14px;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  -webkit-box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+  box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+  background-clip: padding-box;
+}
+
+.dropdown-menu::before,
+.dropdown-menu::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.table-condensed>thead>tr>th,
+.table-condensed>tbody>tr>th,
+.table-condensed>tfoot>tr>th,
+.table-condensed>thead>tr>td,
+.table-condensed>tbody>tr>td,
+.table-condensed>tfoot>tr>td {
+  padding: 5px;
+}
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+
+  .form-control {
+    height: 28px;
+  }
+
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .form-control {
+    font-size: 16px;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .form-control {
+    font-size: 14px;
+  }
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {}
+
+@media screen and (max-width: 800px) {
+  .form-control {
+    height: 28px;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .form-control {
+    height: 28px;
+  }
+}
